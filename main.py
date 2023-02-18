@@ -19,7 +19,7 @@ def convert():
     return send_file(csv_file, as_attachment=True)
 
 def extract_text(pdf_file):
-    pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
 
     num_pages = len(pdf_reader.pages)
     text_pages = []
